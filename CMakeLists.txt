@@ -20,10 +20,11 @@ target_link_libraries(cobalt_core PUBLIC pthread)
 
 # --- LOCAL EXECUTABLES (Linux / macOS) ---
 if(NOT ANDROID)
-    add_executable(sender src/main_sender.cpp)
+    add_executable(sender_app src/main_sender.cpp)
+
     target_link_libraries(sender PRIVATE cobalt_core)
 
-    add_executable(receiver src/main_receiver.cpp)
+    add_executable(receiver_app src/main_receiver.cpp)
     target_link_libraries(receiver PRIVATE cobalt_core)
 endif()
 

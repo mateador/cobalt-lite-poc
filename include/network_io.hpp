@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <cstdint>
+#include <cstddef>
 
 // Returns true if all bytes were sent, false on error/disconnect
 bool send_all(int socket_fd, const std::vector<uint8_t>& data);
