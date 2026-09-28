@@ -69,22 +69,22 @@ This proof-of-concept was built to explore the technical challenges of reliable,
               │                                                   │
               ▼                                                   │
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                         TCP STREAM (Port 9876)                                   │
+│                         TCP STREAM (Port 9876)                                  │
 │                    ┌─────────────────────────────┐                              │
 │                    │   Custom Binary Protocol    │                              │
 │                    │   ───────────────────────   │                              │
 │                    │                             │                              │
-│  Packet Header     │  ┌─────────────────────┐   │                              │
-│  (16 bytes)        │  │ Magic: 0x41424F43   │   │  ◄── Stream Sync             │
-│  ──────────────    │  │ Frame ID: uint32    │   │  ◄── Ordering/Dedup          │
-│                    │  │ Payload Size: uint32│   │  ◄── Dynamic Length          │
-│                    │  │ CRC32: uint32       │   │  ◄── Integrity Check         │
-│                    │  └─────────────────────┘   │                              │
+│  Packet Header     │  ┌─────────────────────┐    │                              │
+│  (16 bytes)        │  │ Magic: 0x41424F43   │    │  ◄── Stream Sync             │
+│  ──────────────    │  │ Frame ID: uint32    │    │  ◄── Ordering/Dedup          │
+│                    │  │ Payload Size: uint32│    │  ◄── Dynamic Length          │
+│                    │  │ CRC32: uint32       │    │  ◄── Integrity Check         │
+│                    │  └─────────────────────┘    │                              │
 │                    │                             │                              │
-│  Payload           │  ┌─────────────────────┐   │                              │
-│  (N bytes)         │  │ RGB Frame Data      │   │  ◄── 320x240x3 = 230,400 B   │
-│  ──────────────    │  │ (Raw Pixel Buffer)  │   │                              │
-│                    │  └─────────────────────┘   │                              │
+│  Payload           │  ┌─────────────────────┐    │                              │
+│  (N bytes)         │  │ RGB Frame Data      │    │  ◄── 320x240x3 = 230,400 B   │
+│  ──────────────    │  │ (Raw Pixel Buffer)  │    │                              │
+│                    │  └─────────────────────┘    │                              │
 │                    └─────────────────────────────┘                              │
 │                                                                                 │
 │  Network Byte Order (Big-Endian)  │  Partial Read Protection  │  CRC32 IEEE     │
