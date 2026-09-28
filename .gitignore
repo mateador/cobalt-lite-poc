@@ -1,5 +1,24 @@
-build/, 
-*.o, 
-*.exe, 
-.vscode/, 
+# Build artifacts
+build/
+cmake-build-*/
+
+# Compiled objects
+*.o
+*.a
+*.so
+*.dylib
+
+# Executables
+sender_app
+receiver_app
+
+# IDE
+.vscode/
 .idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
