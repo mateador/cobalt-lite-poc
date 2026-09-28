@@ -431,8 +431,8 @@ This is a proof-of-concept project, but suggestions and improvements are welcome
 ## 📞 Contact
 
 **Alexandre**  
-GitHub: [@yourusername](https://github.com/mateador)  
-LinkedIn: [Your Profile](https://www.linkedin.com/in/alexandrelsilva)
+GitHub: [@mateador](https://github.com/mateador)  
+LinkedIn: [Alexandre Silva](https://www.linkedin.com/in/alexandrelsilva)
 
 ---
 
