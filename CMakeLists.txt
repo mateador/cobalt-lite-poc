@@ -31,3 +31,22 @@ target_link_libraries(receiver_app PRIVATE core_lib)
 # To build for Android, we would pass: 
 # -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK/build/cmake/android.toolchain.cmake 
 # -DANDROID_ABI=arm64-v8a
+
+# ... [Previous CMake code remains the same] ...
+
+# --- ANDROID / JNI SHARED LIBRARY TARGET ---
+# We only build this if we are actually targeting Android, 
+# but it's good practice to define it so it compiles on Linux too for testing.
+add_library(cobalt_core_jni SHARED
+    src/protocol.cpp
+    src/network_io.cpp
+    src/jni_bridge.cpp       # We will create this next
+)
+
+# Link the Android logging library if building for Android
+if(ANDROID)
+    target_link_libraries(cobalt_core_jni PRIVATE log)
+endif()
+
+# Ensure C++17 and warnings apply here too
+target_compile_features(cobalt_core_jni PUBLIC cxx_std_17)
