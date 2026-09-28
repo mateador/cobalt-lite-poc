@@ -116,7 +116,7 @@ This proof-of-concept was built to explore the technical challenges of reliable,
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/cobalt-lite-poc.git
+git clone https://github.com/mateador/cobalt-lite-poc.git
 cd cobalt-lite-poc
 
 # Create build directory
@@ -431,8 +431,8 @@ This is a proof-of-concept project, but suggestions and improvements are welcome
 ## 📞 Contact
 
 **Alexandre**  
-GitHub: [@yourusername](https://github.com/yourusername)  
-LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
+GitHub: [@yourusername](https://github.com/mateador)  
+LinkedIn: [Your Profile](https://www.linkedin.com/in/alexandrelsilva)
 
 ---
 
